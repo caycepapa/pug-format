@@ -1,0 +1,100 @@
+@use "../../foundations/var" as *;
+
+.u-m__xs{
+    margin: var(--margin-xs);
+}
+
+.u-m__s{
+    margin: var(--margin-s);
+}
+
+.u-m__m{
+    margin: var(--margin-m);
+}
+
+.u-m__l{
+    margin: var(--margin-l);
+}
+
+.u-m__2l{
+    margin: var(--margin-2l);
+}
+
+.u-m__3l{
+    margin: var(--margin-3l);
+}
+
+.u-m__4l{
+    margin: var(--margin-4l);
+}
+
+.u-m__5l{
+    margin: var(--margin-5l);
+}
+
+// margin top
+
+.u-mt__xs{
+    margin-top: var(--margin-xs);
+}
+
+.u-mt__s{
+    margin-top: var(--margin-s);
+}
+
+.u-mt__m{
+    margin-top: var(--margin-m);
+}
+
+.u-mt__l{
+    margin-top: var(--margin-l);
+}
+
+.u-mt__2l{
+    margin-top: var(--margin-2l);
+}
+
+.u-mt__3l{
+    margin-top: var(--margin-3l);
+}
+
+.u-mt__4l{
+    margin-top: var(--margin-4l);
+}
+
+.u-mt__5l{
+    margin-top: var(--margin-5l);
+}
+
+// margin bottom
+.u-mb__xs{
+    margin-bottom: var(--margin-xs);
+}
+
+.u-mb__s{
+    margin-bottom: var(--margin-s);
+}
+
+.u-mb__m{
+    margin-bottom: var(--margin-m);
+}
+
+.u-mb__l{
+    margin-bottom: var(--margin-l);
+}
+
+.u-mb__2l{
+    margin-bottom: var(--margin-2l);
+}
+
+.u-mb__3l{
+    margin-bottom: var(--margin-3l);
+}
+
+.u-mb__4l{
+    margin-bottom: var(--margin-4l);
+}
+
+.u-mb__5l{
+    margin-bottom: var(--margin-5l);
+}

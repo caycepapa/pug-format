@@ -1,0 +1,9 @@
+@use "../../foundations/var" as *;
+
+.u-color__blue{
+    color: var(--color-main);
+}
+
+.u-color__black{
+    color: var(--color-txt);
+}

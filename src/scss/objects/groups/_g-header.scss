@@ -1,0 +1,165 @@
+@use '../../foundations/var' as *;
+
+.g-header{
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    @include tab{
+        padding-top: 2.4rem;
+    }
+
+    &::before{
+        left: 19.0rem;
+        top: 100%;
+        width: 2vw;
+        aspect-ratio: 1/1;
+        background-image: url(../img/cmn/picture-r.svg);
+        content: '';
+        position: absolute;
+        display: block;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include tab{
+            left: 13.2rem;
+        }
+    }
+}
+
+.g-header__logo{
+    width: 19.0rem;
+    padding: 4.0rem;
+    border-radius: 3.2rem;
+    background-color: var(--color-white);
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    @include tab{
+        width: 13.2rem;
+        padding: 2.4rem;
+        border-radius: 1.6rem;
+    }
+    
+    &::before{
+        left: 50%;
+        top: 100%;
+        width: 2vw;
+        aspect-ratio: 1/1;
+        background-image: url(../img/cmn/picture-r.svg);
+        content: '';
+        position: absolute;
+        display: block;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include tab{
+            left: var(--side-margin);
+        }
+    }
+}
+
+.g-header__nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: getpc_vw(32);
+    padding: getpc_vw(40) getpc_vw(40) getpc_vw(40) 24.0rem;
+
+    @include tab{
+        display: none;
+    }
+}
+
+.g-header__nav__list{
+    display: flex;
+    align-items: center;
+
+    li{
+        padding-right: getpc_vw(24);
+        padding-left: getpc_vw(16);
+        margin-right: getpc_vw(24);
+        position: relative;
+        line-height: 1;
+
+        &::after{
+            content: '';
+            display: block;
+            width: 1px;
+            height: 100%;
+            border-right: 1px dotted var(--color-main);
+            position: absolute;
+            top: 50%;
+            right: 0;
+            rotate: 45deg;
+            transform: translateY(calc(-50% - 0.4rem));
+            transform-origin: center center;
+        }
+
+        &:last-child{
+            margin-right: 0;
+            padding-right: 0;
+            &::after{
+                display: none;
+            }
+        }
+
+        &:first-child{
+            padding-left: 0;
+        }
+    }
+}
+
+.g-header__nav__btn{
+    color: var(--color-main);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(1.4rem, getpc_vw(16), 1.6rem);
+    position: relative;
+    display: inline-block;
+    padding: .8rem 0;
+
+    &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-main);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right center;
+        transition: transform 0.3s;
+        border-radius: 9999px;
+    }
+
+    &.is-hover{
+        &::after{
+            transform: scaleX(1);
+            transform-origin: left center;
+        }
+    }
+
+    &.is-hoverOut{
+        &::after{
+            transform: scaleX(0);
+            transform-origin: right center;
+        }
+    }
+}
+
+.g-header__nav__cvlist{
+    display: flex;
+    gap: 1.6rem;
+    font-size: clamp(1.2rem, getpc_vw(14), 1.4rem);
+}
+
+.g-header__nav__cvl__btn{
+    padding-left: getpc_vw(24);
+    padding-right: getpc_vw(24);
+}

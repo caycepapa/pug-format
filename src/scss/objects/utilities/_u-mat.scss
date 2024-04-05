@@ -1,0 +1,40 @@
+@use "../../foundations/var" as *;
+
+.u-mat{
+    padding: var(--margin-4l) 0;
+    position: relative;
+
+    &>*{
+        position: relative;
+    }
+
+    &::before{
+        content: "";
+        display: block;
+        width: 100vw;
+        height: 100%;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+
+        @include tab{
+            margin-left: calc(var(--side-margin) * -1);
+            margin-right: calc(var(--side-margin) * -1);
+        }
+    }
+}
+
+.u-mat--thinblue{
+    &::before{
+        background-color: var(--color-thinblue);
+    }
+}
+
+.u-mat--blue{
+    &::before{
+        background-color: var(--color-blue);
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<?php 
+    $page = 'home';
+?>
+<html lang="ja">
+<head>
+<meta charset=UTF-8>
+<title>ページパーツ｜★サイトタイトル</title>
+<meta name=description content="★サイトディスクリプション">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, height=device-height ,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta name="author" content="★サイト管理者">
+<meta name="copyright" content="Copyright (C) ★★★★★★. All Rights Reserved.">
+<meta property="og:site_name" content="★サイトタイトル">
+<meta property="og:type" content="website">
+<meta property="og:title" content="★サイトタイトル">
+<meta property="og:url" content="★サイトURL">
+<meta property="og:image" content="★OGPイメージのURLを絶対パスで入力">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="★サイトタイトル">
+<meta property="og:description" content="★サイトディスクリプション">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="./assets/css/style.css">
+<style>
+    body{
+        padding: 4.0rem;
+    }
+    .parts-title{
+        font-size: 2.4rem;
+        margin-bottom: 4.0rem;
+    }
+    .parts-subtitle{
+        font-size: 2.0rem;
+        margin-bottom: 2.0rem;
+        border-left: 4px solid #CCC;
+        padding-left: 1.6rem;
+    }
+    .l-parts-index{
+        margin-bottom: 8.0rem;
+        border: 1px solid #CCC;
+        padding: 1.6rem;
+    }
+    .l-parts-index li{
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+    .l-parts-section{
+        margin-bottom: 8.0rem;
+    }
+    .l-parts-block{
+        margin-bottom: 4.0rem;
+    }
+    .l-parts-block dt{
+        margin-bottom: .8rem;
+    }
+    .l-parts-block dd{
+
+    }
+    .parts-button{
+        border: 1px solid #CCC;
+        padding: .8rem 1.6rem;
+        background: linear-gradient(180deg, #FFF, #EEE);
+    }
+    .l-parts-content{
+        border: 1px solid #CCC;
+        padding: 1.6rem;
+        background: #F6F6F6;
+    }
+    .l-parts-copybtn{
+        padding-top: 1.6rem;
+    }
+</style>
+</head>
+<body class="is-home">
+    <h1 class="parts-title">ページパーツ一覧</h1>
+
+    <ul class="l-parts-index" name="headlines"></ul>
+
+    <section class="l-parts-section">
+        <h2 class="parts-subtitle" name="partsHeadLine" id="btns">ボタン一覧</h2>
+        <dl class="l-parts-block">
+            <dt>.c-btn__round</dt>
+            <dd class="l-parts-content" name="copyTarget"><a href="#" class="c-btn__round">ボタン</a></dd>
+            <dd class="l-parts-copybtn"><button class="parts-button" name="copyBtn">コードをコピー</button></dd>
+        </dl>
+        <dl class="l-parts-block">
+            <dt>.c-btn__round__bw</dt>
+            <dd class="l-parts-content" name="copyTarget"><a href="" class="c-btn__round__bw">詳細を見る</a></dd>
+            <dd class="l-parts-copybtn"><button class="parts-button" name="copyBtn">コードをコピー</button></dd>
+        </dl>
+    </section>
+
+
+    <script>
+        var copyBtns = document.querySelectorAll('[name="copyBtn"]');
+
+        for(var i = 0; i < copyBtns.length; i++){
+            copyBtns[i].addEventListener('click', function(){
+                var parent = this.parentElement.parentElement;
+                var target = parent.querySelector('[name="copyTarget"]');
+                var code = target.innerHTML;
+                // codeをクリップボードにコピー
+                if (navigator.clipboard) { // サポートしているかを確認
+                    navigator.clipboard.writeText(code);
+                }else{
+                    console.log('test');
+                }
+            });
+        }
+
+        var headlines = document.querySelectorAll('[name="headlines"]');
+        var headline = document.querySelectorAll('[name="partsHeadLine"]');
+
+        for(var i = 0; i < headline.length; i++){
+            var headlineText = headline[i].textContent;
+            var headlineId = headline[i].id;
+            var li = document.createElement('li');
+            var a = document.createElement('a');
+            a.textContent = headlineText;
+            a.href = '#' + headlineId;
+            li.appendChild(a);
+            headlines[0].appendChild(li);
+        }
+
+    </script>
+    <script src="./assets/js/bundle.js"></script>
+</body>
+</html>

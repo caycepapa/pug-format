@@ -1,0 +1,30 @@
+@use "../../foundations/var" as *;
+
+.c-icon{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.is-youtube{
+        background-image: url(../img/cmn/icon-youtube.svg);
+    }
+    &.is-x{
+        margin-inline: auto;
+        background-image: url(../img/cmn/icon-x.svg);
+        background-size: 90%;
+        &.is-wht{
+            background-image: url(../img/cmn/icon-x-wht.svg);
+        }
+    }
+    &.is-instagram{
+        background-image: url(../img/cmn/icon-instagram.svg);
+    }
+    &.is-facebook{
+        background-image: url(../img/cmn/icon-facebook.svg);
+    }
+    &.is-line{
+        background-image: url(../img/cmn/icon-line.svg);
+    }
+}

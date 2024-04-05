@@ -1,0 +1,19 @@
+@use "../../foundations/var" as *;
+
+.u-home__messagemat{
+    padding-top: getpc_vw(70);
+    padding-bottom: getpc_vw(70);
+}
+
+.u-home__policymat{
+    padding-bottom: getpc_vw(70);
+}
+
+.u-home__profilemat{
+    padding-right: var(--margin-5l);
+    padding-left: var(--margin-5l);
+}
+
+.u-home__topicsmat{
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+@use "../foundations/var" as *;
+
+.l-sns-widget{
+    position: fixed;
+    right: 1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+
+    @include tab{
+        display: none;
+    }
+}

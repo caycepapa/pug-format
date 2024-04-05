@@ -1,0 +1,144 @@
+
+/*レスポンシブ用*/
+$pcl: 1600px; // PC 大サイズ
+$pcm: 1440px; // PC 中サイズ
+$pc: 1200px; // PC 通常
+$pcs: 1027px; // PCS
+$tab: 1023px; // タブレット
+$spl: 767px; // スマホ横
+$sp: 520px;  // スマホ
+$sps: 320px; // スマホ SEサイズ
+
+$easing01:cubic-bezier(0.26, 0.06, 0, 1);
+$easing02:cubic-bezier(0.18, 0.06, 0.23, 1);
+
+@mixin motionBefore($propaty:all, $sec:0.5s, $easing:$easing01){
+    transition: $sec $easing $propaty;
+}
+
+@mixin motionAfter($propaty:all, $sec:0.25s, $easing:$easing02){
+    transition: $sec $easing $propaty;
+}
+
+@mixin max_width(){
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+@mixin sprite_wrap(){
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
+    background-repeat: no-repeat;
+}
+
+
+@mixin pcl {
+    @media only screen and (max-width: ($pcl)) {
+        @content;
+    }
+}
+@mixin pcm {
+    @media only screen and (max-width: ($pcm)) {
+        @content;
+    }
+}
+@mixin pc {
+    @media only screen and (max-width: ($pc)) {
+        @content;
+    }
+}
+@mixin pcs {
+    @media only screen and (max-width: ($pcs)) {
+        @content;
+    }
+}
+@mixin tab {
+    @media only screen and (max-width: ($tab)) {
+        @content;
+    }
+}
+@mixin spl {
+    @media only screen and (max-width: ($spl)) {
+        @content;
+    }
+}
+@mixin sp {
+    @media only screen and (max-width: ($sp)) {
+        @content;
+    }
+}
+@mixin sps {
+    @media only screen and (max-width: ($sps)) {
+        @content;
+    }
+}
+
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function getpc_vw($size, $viewport:1280){
+    $rate: calc(100 / $viewport);
+    @return $rate * $size * 1vw;
+}
+
+@function gettab_vw($size, $viewport:768){
+    $rate: calc(100 / $viewport);
+    @return $rate * $size * 1vw;
+}
+
+@function getsp_vw($size, $viewport:370){
+    $rate: calc(100 / $viewport);
+    @return $rate * $size * 1vw;
+}
+
+// container
+:root{
+    --container-width: 110.0rem;
+    --side-margin: 2.4rem;
+
+    @include spl{
+        --side-margin: 1.6rem;
+    }
+}
+
+// color
+:root{
+    --color-main: #17339C;
+    --color-txt: #000;
+    --color-white: #ffffff;
+    --color-blue: #1877f2;
+    --color-paleblue: #ccdcfe;
+    --color-lightblue: #2ea7e0;
+    --color-yellow: #ffdc26;
+    --color-navy: #213378;
+    --color-thinblue: #E8F8FF;
+    --color-gray: #EEE;
+}
+
+// font
+:root{
+    --font-main: "Noto Sans JP", sans-serif;//semibold=600
+    --font-en: "Roboto", sans-serif;
+    --font-point: "Noto Sans JP", sans-serif;//A-OTF Gothic MB101 Pro
+    --font-point02: "Noto Sans JP", sans-serif;//A-OTF Harucraft Std
+    --font-outfit: "Outfit", sans-serif;
+}
+
+// margin
+:root{
+    --default-margin: 1.6rem;
+    --margin-xs: calc(var(--default-margin) / 4);
+    --margin-s: calc(var(--default-margin) / 2);
+    --margin-m: var(--default-margin);
+    // 1.6 * 1.5 = 2.4
+    --margin-l: calc(var(--default-margin) * 1.5);
+    // 1.6 * 2 = 3.2
+    --margin-2l: calc(var(--default-margin) * 2);
+    // 1.6 * 3 = 4.8
+    --margin-3l: calc(var(--default-margin) * 3);
+    // 1.6 * 4 = 6.4
+    --margin-4l: calc(var(--default-margin) * 4);
+    // 1.6 * 5 = 8.0
+    --margin-5l: calc(var(--default-margin) * 5);
+    // 1.6 * 6 = 9.6
+    --margin-6l: calc(var(--default-margin) * 6);
+}

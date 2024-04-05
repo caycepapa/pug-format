@@ -1,0 +1,31 @@
+extends components/_layout.pug
+
+block variables
+    - var page = 'home'
+    - var siteInfo = global
+    - var meta = siteInfo.pageMeta[page]
+    - var isFrontPage = true
+
+block append pageMeta
+    meta(name="description" content=meta.description)
+    meta(property="og:title" content=siteInfo.siteName)
+    meta(property="og:description" content=meta.description)
+    meta(property="og:url" content=siteInfo.siteUrl + meta.path)
+    meta(property="og:type" content=meta.type)
+    meta(property="og:image" content=meta.ogpImage)
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:title" content=siteInfo.siteName)
+    meta(name="twitter:description" content=meta.description)
+    meta(property="twitter:image" content=meta.ogpImage)
+    if isFrontPage
+        title #{siteInfo.siteName}
+    else
+        title #{meta.title} | #{siteInfo.siteName}
+
+block pageContent
+    //- lead
+    //- .l-home__lead
+    //-     include components/home/_lead.pug
+    //- //- about
+    //- .l-home__about
+    //-     include components/home/_about.pug

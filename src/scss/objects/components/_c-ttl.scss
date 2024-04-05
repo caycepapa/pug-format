@@ -1,0 +1,31 @@
+@use "../../foundations/var" as *;
+
+.c-ttl__page{
+    display: grid;
+    width: fit-content;
+    grid-template:
+    'ja' 6.4rem
+    'en' 1.4rem
+    /auto;
+    gap: 1.0rem;
+    &__ja{
+        grid-area: 'ja';
+        background-color: var(--color-main);
+        border-radius: 8px;
+        padding: 1.6rem 4.0rem;
+        font-size: 2.4rem;
+        line-height: 1.2;
+        color: var(--color-white);
+        text-align: center;
+        font-weight: bold;
+    }
+    &__en{
+        grid-area: 'en';
+        font-family: var(--font-en);
+        font-size: 1.2rem;
+        color: var(--color-main);
+        text-align: center;
+        letter-spacing: 0.2em;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,64 @@
+@use "../../foundations/var" as *;
+
+.c-logo{
+    display: block;
+    width: 100%;
+    aspect-ratio: 116.6/326;
+    background-image: url(../img/cmn/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 200%;
+}
+
+.c-logo__w{
+    width: fit-content;
+    display: grid;
+    grid-template:
+        'posi posi' auto
+        'name kana' auto
+        /17.4rem 11.2rem;
+    gap: .4rem 2.0rem;
+    text-decoration: none;
+    @include spl{
+        grid-template:
+        'posi' 1.4rem
+        'name' 4.0rem
+        'kana' 1.4rem
+        /1fr;
+        gap: 0.8rem;
+    }
+}
+
+.c-logo__w__position{
+    grid-area: posi;
+    font-family: var(--font-point);
+    color: var(--color-white);
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.0;
+}
+
+.c-logo__w__name{
+    grid-area: name;
+    font-family: var(--font-point);
+    color: var(--color-white);
+    font-size: 4.0rem;
+    font-weight: bold;
+    line-height: 1.0;
+}
+
+.c-logo__w__kana{
+    grid-area: kana;
+    font-family: var(--font-point);
+    color: var(--color-white);
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.0;
+    align-self: flex-end;
+
+    @include spl{
+        margin: 0.4rem 0 0;
+    }
+}

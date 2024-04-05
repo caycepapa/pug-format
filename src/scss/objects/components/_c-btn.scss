@@ -1,0 +1,265 @@
+@use "../../foundations/var" as *;
+
+.c-btn__oval{
+    display: inline-block;
+    border-radius: 999rem;
+    padding: 0.8rem 3.0rem;
+    background-color: var(--color-main);
+    text-decoration: none;
+    text-align: center;
+    color: var(--color-white);
+    font-weight: bold;
+    border: 2px solid var(--color-main);
+    @include motionBefore();
+
+    &.is-hover{
+        background-color: var(--color-white);
+        color: var(--color-main);
+        @include motionAfter();
+    }
+
+    span{
+        display: inline-block;
+        gap: 0.8rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+        line-height: 1;
+        position: relative;
+        padding: 0.4rem 0;
+        padding-right: 2.0em;
+
+        &:not(:has(i)){
+            padding-right: 0;
+        }
+    }
+
+    &.has-shadow{
+        box-shadow: 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+    }
+
+    &.is-wht{
+        background-color: var(--color-white);
+        color: var(--color-main);
+
+        &.is-hover{
+            background-color: var(--color-main);
+            color: var(--color-white);
+        }
+    }
+
+    &.is-paleblue{
+        background-color: var(--color-paleblue);
+        span{
+            color: var(--color-main);
+        }
+    }
+}
+.c-btn__oval__icon{
+    display: block;
+    width: 1.14em;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: var(--color-white);
+    border-radius: 9999px;
+    @include motionBefore();
+    &::before,&::after{
+            content: '';
+            display: block;
+            background-color: var(--color-main);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    .is-wht &{
+        background-color: var(--color-main);
+        &::before,&::after{
+                background-color: var(--color-white);
+            }
+    }
+    &.is-tri-down{
+        &::after{
+            width: 20%;
+            aspect-ratio: 4/5;
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+        }
+    }
+    &.is-tri-right{
+        &::after{
+            width: 24%;
+            aspect-ratio: 5/4;
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
+        }
+    }
+    &.is-arrow{
+        &::after{
+            width: 32%;
+            aspect-ratio: 1/1;
+            background-color: transparent;
+            border: 1.6px solid var(--color-main);
+            border-left: none;
+            border-bottom: none;
+            transform: translate(calc(-50% - 16%), -50%) rotate(45deg);
+            z-index: 1;
+        }
+        .is-wht &{
+            &::after{
+                border: 1.6px solid var(--color-white);
+                border-left: none;
+                border-bottom: none;
+            }
+        }
+    }
+    &.is-plus{
+        &::before{
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+        &::before,&::after{
+            width: 40%;
+            height: 2px;
+        }
+    }
+
+    .is-hover &{
+        background-color: var(--color-main);
+        &::before,&::after{
+            background-color: var(--color-white);
+        }
+        &.is-arrow{
+            &::after{
+                background-color: transparent;
+                border: 2px solid var(--color-white);
+                border-left: none;
+                border-bottom: none;
+            }
+        }
+        @include motionAfter();
+    }
+    .is-wht.is-hover &{
+        background-color: var(--color-white);
+        &::before,&::after{
+            background-color: var(--color-main);
+        }
+        &.is-arrow{
+            &::after{
+                background-color: transparent;
+                border: 2px solid var(--color-main);
+                border-left: none;
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+//prev, next
+
+.c-btn__circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--color-main);
+    &::after{
+        content: '';
+        display: block;
+        width: 32%;
+        aspect-ratio: 1/1;
+        border: 2px solid var(--color-white);
+        border-right: none;
+        border-top: none;
+    }
+    &.go-prev{
+        &::after{
+            transform: rotate(45deg) translate(16%, -16%);
+        }
+    }
+    &.go-next{
+        &::after{
+            transform: rotate(-135deg) translate(16%, -16%);
+        }
+    }
+}
+
+.c-btn__pagetop{
+    width: fit-content;
+    text-decoration: none;
+    text-align: center;
+    padding: 2.4em;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-main);
+    &::before{
+        content: '';
+        display: block;
+        width: 1.6em;
+        aspect-ratio: 1/1;
+        border: 2px solid var(--color-main);
+        border-left: none;
+        border-bottom: none;
+        position: absolute;
+        top: 0.4em;
+        left: 50%;
+        transform: translateX(-50%);
+        rotate: -45deg;
+    }
+
+    &.is-hover{
+        color:var(--color-blue);
+        &::before{
+            border-color: var(--color-blue);
+        }
+    }
+}
+
+
+/*-----------------------------------------
+sns btn
+-----------------------------------------*/
+.c-btn__snsrect{
+    background-color: var(--color-white);
+    box-shadow: .4rem .4rem 0 rgba(0,0,0,0.1);
+    border-radius: 1.6rem;
+    aspect-ratio: 200/140;
+    color:var(--color-navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    border: 4px solid var(--color-white);
+    @include motionBefore();
+    position: relative;
+    gap: .4rem;
+
+    &.is-hover{
+        border-color: var(--color-main);
+        @include motionAfter();
+    }
+
+    &::after{
+        position: absolute;
+        content: '';
+        display: block;
+        bottom: .8rem;
+        right: .8rem;
+        width: 12px;
+        aspect-ratio: 1/1;
+        background-image: url(../img/cmn/icon-blank.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    span{
+        font-weight: bold;
+    }
+}
+
+.c-btn__snsrect__icon{
+    width: 4.0rem;
+}

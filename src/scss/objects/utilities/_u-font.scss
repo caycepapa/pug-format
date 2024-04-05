@@ -1,0 +1,33 @@
+@use "../../foundations/var" as *;
+
+.u-m__xs{
+    margin: var(--margin-xs);
+}
+
+.u-m__s{
+    margin: var(--margin-s);
+}
+
+.u-m__m{
+    margin: var(--margin-m);
+}
+
+.u-m__l{
+    margin: var(--margin-l);
+}
+
+.u-m__2l{
+    margin: var(--margin-2l);
+}
+
+.u-m__3l{
+    margin: var(--margin-3l);
+}
+
+.u-m__4l{
+    margin: var(--margin-4l);
+}
+
+.u-m__5l{
+    margin: var(--margin-5l);
+}

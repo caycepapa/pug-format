@@ -1,0 +1,8 @@
+@use "../foundations/var" as *;
+
+.l-container{
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding-left: var(--side-margin);
+    padding-right: var(--side-margin);
+}

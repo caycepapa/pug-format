@@ -1,0 +1,10 @@
+// 基本セット
+@use 'u-mat';
+@use 'u-margin';
+@use 'u-padding';
+@use 'u-font';
+@use 'u-color';
+
+
+// そのページのみで使うセット
+@use 'u-home';
