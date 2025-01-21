@@ -67,6 +67,7 @@ const buildDefault = {
                         options: {
                             // ソースマップの利用有無
                             sourceMap: enabledSourceMap,
+                            implementation: require('sass')
                         },
                     },
                 ],

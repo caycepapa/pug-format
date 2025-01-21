@@ -399,51 +399,6 @@ br.is-spsbr {
     display: block;
   }
 }
-/*レスポンシブ用*/
-:root {
-  --container-width: 110.0rem;
-  --side-margin: 2.4rem;
-}
-@media only screen and (max-width: 767px) {
-  :root {
-    --side-margin: 1.6rem;
-  }
-}
-
-:root {
-  --color-main: #17339C;
-  --color-txt: #000;
-  --color-white: #ffffff;
-  --color-blue: #1877f2;
-  --color-paleblue: #ccdcfe;
-  --color-lightblue: #2ea7e0;
-  --color-yellow: #ffdc26;
-  --color-navy: #213378;
-  --color-thinblue: #E8F8FF;
-  --color-gray: #EEE;
-}
-
-:root {
-  --font-main: "Noto Sans JP", sans-serif;
-  --font-en: "Roboto", sans-serif;
-  --font-point: "Noto Sans JP", sans-serif;
-  --font-point02: "Noto Sans JP", sans-serif;
-  --font-outfit: "Outfit", sans-serif;
-}
-
-:root {
-  --default-margin: 1.6rem;
-  --margin-xs: calc(var(--default-margin) / 4);
-  --margin-s: calc(var(--default-margin) / 2);
-  --margin-m: var(--default-margin);
-  --margin-l: calc(var(--default-margin) * 1.5);
-  --margin-2l: calc(var(--default-margin) * 2);
-  --margin-3l: calc(var(--default-margin) * 3);
-  --margin-4l: calc(var(--default-margin) * 4);
-  --margin-5l: calc(var(--default-margin) * 5);
-  --margin-6l: calc(var(--default-margin) * 6);
-}
-
 .l-container {
   max-width: var(--container-width);
   margin-inline: auto;
@@ -475,51 +430,6 @@ br.is-spsbr {
   .l-sns-widget {
     display: none;
   }
-}
-
-/*レスポンシブ用*/
-:root {
-  --container-width: 110.0rem;
-  --side-margin: 2.4rem;
-}
-
-@media only screen and (max-width: 767px) {
-  :root {
-    --side-margin: 1.6rem;
-  }
-}
-:root {
-  --color-main: #17339C;
-  --color-txt: #000;
-  --color-white: #ffffff;
-  --color-blue: #1877f2;
-  --color-paleblue: #ccdcfe;
-  --color-lightblue: #2ea7e0;
-  --color-yellow: #ffdc26;
-  --color-navy: #213378;
-  --color-thinblue: #E8F8FF;
-  --color-gray: #EEE;
-}
-
-:root {
-  --font-main: "Noto Sans JP", sans-serif;
-  --font-en: "Roboto", sans-serif;
-  --font-point: "Noto Sans JP", sans-serif;
-  --font-point02: "Noto Sans JP", sans-serif;
-  --font-outfit: "Outfit", sans-serif;
-}
-
-:root {
-  --default-margin: 1.6rem;
-  --margin-xs: calc(var(--default-margin) / 4);
-  --margin-s: calc(var(--default-margin) / 2);
-  --margin-m: var(--default-margin);
-  --margin-l: calc(var(--default-margin) * 1.5);
-  --margin-2l: calc(var(--default-margin) * 2);
-  --margin-3l: calc(var(--default-margin) * 3);
-  --margin-4l: calc(var(--default-margin) * 4);
-  --margin-5l: calc(var(--default-margin) * 5);
-  --margin-6l: calc(var(--default-margin) * 6);
 }
 
 .c-btn__oval {
@@ -600,14 +510,12 @@ br.is-spsbr {
 .c-btn__oval__icon.is-tri-down::after {
   width: 20%;
   aspect-ratio: 4/5;
-  -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
-          clip-path: polygon(0 0, 100% 0, 50% 100%);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 .c-btn__oval__icon.is-tri-right::after {
   width: 24%;
   aspect-ratio: 5/4;
-  -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
-          clip-path: polygon(0 0, 100% 50%, 0 100%);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 .c-btn__oval__icon.is-arrow::after {
   width: 32%;
@@ -683,7 +591,6 @@ br.is-spsbr {
 }
 
 .c-btn__pagetop {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   text-decoration: none;
@@ -758,54 +665,8 @@ sns btn
   width: 4rem;
 }
 
-/*レスポンシブ用*/
-:root {
-  --container-width: 110.0rem;
-  --side-margin: 2.4rem;
-}
-
-@media only screen and (max-width: 767px) {
-  :root {
-    --side-margin: 1.6rem;
-  }
-}
-:root {
-  --color-main: #17339C;
-  --color-txt: #000;
-  --color-white: #ffffff;
-  --color-blue: #1877f2;
-  --color-paleblue: #ccdcfe;
-  --color-lightblue: #2ea7e0;
-  --color-yellow: #ffdc26;
-  --color-navy: #213378;
-  --color-thinblue: #E8F8FF;
-  --color-gray: #EEE;
-}
-
-:root {
-  --font-main: "Noto Sans JP", sans-serif;
-  --font-en: "Roboto", sans-serif;
-  --font-point: "Noto Sans JP", sans-serif;
-  --font-point02: "Noto Sans JP", sans-serif;
-  --font-outfit: "Outfit", sans-serif;
-}
-
-:root {
-  --default-margin: 1.6rem;
-  --margin-xs: calc(var(--default-margin) / 4);
-  --margin-s: calc(var(--default-margin) / 2);
-  --margin-m: var(--default-margin);
-  --margin-l: calc(var(--default-margin) * 1.5);
-  --margin-2l: calc(var(--default-margin) * 2);
-  --margin-3l: calc(var(--default-margin) * 3);
-  --margin-4l: calc(var(--default-margin) * 4);
-  --margin-5l: calc(var(--default-margin) * 5);
-  --margin-6l: calc(var(--default-margin) * 6);
-}
-
 .c-ttl__page {
   display: grid;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   grid-template: "ja" 6.4rem "en" 1.4rem/auto;
@@ -832,53 +693,7 @@ sns btn
   font-weight: bold;
 }
 
-/*レスポンシブ用*/
-:root {
-  --container-width: 110.0rem;
-  --side-margin: 2.4rem;
-}
-
-@media only screen and (max-width: 767px) {
-  :root {
-    --side-margin: 1.6rem;
-  }
-}
-:root {
-  --color-main: #17339C;
-  --color-txt: #000;
-  --color-white: #ffffff;
-  --color-blue: #1877f2;
-  --color-paleblue: #ccdcfe;
-  --color-lightblue: #2ea7e0;
-  --color-yellow: #ffdc26;
-  --color-navy: #213378;
-  --color-thinblue: #E8F8FF;
-  --color-gray: #EEE;
-}
-
-:root {
-  --font-main: "Noto Sans JP", sans-serif;
-  --font-en: "Roboto", sans-serif;
-  --font-point: "Noto Sans JP", sans-serif;
-  --font-point02: "Noto Sans JP", sans-serif;
-  --font-outfit: "Outfit", sans-serif;
-}
-
-:root {
-  --default-margin: 1.6rem;
-  --margin-xs: calc(var(--default-margin) / 4);
-  --margin-s: calc(var(--default-margin) / 2);
-  --margin-m: var(--default-margin);
-  --margin-l: calc(var(--default-margin) * 1.5);
-  --margin-2l: calc(var(--default-margin) * 2);
-  --margin-3l: calc(var(--default-margin) * 3);
-  --margin-4l: calc(var(--default-margin) * 4);
-  --margin-5l: calc(var(--default-margin) * 5);
-  --margin-6l: calc(var(--default-margin) * 6);
-}
-
 .c-hline {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
@@ -954,51 +769,6 @@ sns btn
   color: var(--color-white);
 }
 
-/*レスポンシブ用*/
-:root {
-  --container-width: 110.0rem;
-  --side-margin: 2.4rem;
-}
-
-@media only screen and (max-width: 767px) {
-  :root {
-    --side-margin: 1.6rem;
-  }
-}
-:root {
-  --color-main: #17339C;
-  --color-txt: #000;
-  --color-white: #ffffff;
-  --color-blue: #1877f2;
-  --color-paleblue: #ccdcfe;
-  --color-lightblue: #2ea7e0;
-  --color-yellow: #ffdc26;
-  --color-navy: #213378;
-  --color-thinblue: #E8F8FF;
-  --color-gray: #EEE;
-}
-
-:root {
-  --font-main: "Noto Sans JP", sans-serif;
-  --font-en: "Roboto", sans-serif;
-  --font-point: "Noto Sans JP", sans-serif;
-  --font-point02: "Noto Sans JP", sans-serif;
-  --font-outfit: "Outfit", sans-serif;
-}
-
-:root {
-  --default-margin: 1.6rem;
-  --margin-xs: calc(var(--default-margin) / 4);
-  --margin-s: calc(var(--default-margin) / 2);
-  --margin-m: var(--default-margin);
-  --margin-l: calc(var(--default-margin) * 1.5);
-  --margin-2l: calc(var(--default-margin) * 2);
-  --margin-3l: calc(var(--default-margin) * 3);
-  --margin-4l: calc(var(--default-margin) * 4);
-  --margin-5l: calc(var(--default-margin) * 5);
-  --margin-6l: calc(var(--default-margin) * 6);
-}
-
 .c-icon {
   display: block;
   width: 100%;
@@ -1028,51 +798,6 @@ sns btn
   background-image: url(../img/cmn/icon-line.svg);
 }
 
-/*レスポンシブ用*/
-:root {
-  --container-width: 110.0rem;
-  --side-margin: 2.4rem;
-}
-
-@media only screen and (max-width: 767px) {
-  :root {
-    --side-margin: 1.6rem;
-  }
-}
-:root {
-  --color-main: #17339C;
-  --color-txt: #000;
-  --color-white: #ffffff;
-  --color-blue: #1877f2;
-  --color-paleblue: #ccdcfe;
-  --color-lightblue: #2ea7e0;
-  --color-yellow: #ffdc26;
-  --color-navy: #213378;
-  --color-thinblue: #E8F8FF;
-  --color-gray: #EEE;
-}
-
-:root {
-  --font-main: "Noto Sans JP", sans-serif;
-  --font-en: "Roboto", sans-serif;
-  --font-point: "Noto Sans JP", sans-serif;
-  --font-point02: "Noto Sans JP", sans-serif;
-  --font-outfit: "Outfit", sans-serif;
-}
-
-:root {
-  --default-margin: 1.6rem;
-  --margin-xs: calc(var(--default-margin) / 4);
-  --margin-s: calc(var(--default-margin) / 2);
-  --margin-m: var(--default-margin);
-  --margin-l: calc(var(--default-margin) * 1.5);
-  --margin-2l: calc(var(--default-margin) * 2);
-  --margin-3l: calc(var(--default-margin) * 3);
-  --margin-4l: calc(var(--default-margin) * 4);
-  --margin-5l: calc(var(--default-margin) * 5);
-  --margin-6l: calc(var(--default-margin) * 6);
-}
-
 .c-logo {
   display: block;
   width: 100%;
@@ -1086,7 +811,6 @@ sns btn
 }
 
 .c-logo__w {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: grid;
@@ -1155,51 +879,6 @@ sns btn
   .c-logo__w__kana {
     margin: 0.4rem 0 0;
   }
-}
-
-/*レスポンシブ用*/
-:root {
-  --container-width: 110.0rem;
-  --side-margin: 2.4rem;
-}
-
-@media only screen and (max-width: 767px) {
-  :root {
-    --side-margin: 1.6rem;
-  }
-}
-:root {
-  --color-main: #17339C;
-  --color-txt: #000;
-  --color-white: #ffffff;
-  --color-blue: #1877f2;
-  --color-paleblue: #ccdcfe;
-  --color-lightblue: #2ea7e0;
-  --color-yellow: #ffdc26;
-  --color-navy: #213378;
-  --color-thinblue: #E8F8FF;
-  --color-gray: #EEE;
-}
-
-:root {
-  --font-main: "Noto Sans JP", sans-serif;
-  --font-en: "Roboto", sans-serif;
-  --font-point: "Noto Sans JP", sans-serif;
-  --font-point02: "Noto Sans JP", sans-serif;
-  --font-outfit: "Outfit", sans-serif;
-}
-
-:root {
-  --default-margin: 1.6rem;
-  --margin-xs: calc(var(--default-margin) / 4);
-  --margin-s: calc(var(--default-margin) / 2);
-  --margin-m: var(--default-margin);
-  --margin-l: calc(var(--default-margin) * 1.5);
-  --margin-2l: calc(var(--default-margin) * 2);
-  --margin-3l: calc(var(--default-margin) * 3);
-  --margin-4l: calc(var(--default-margin) * 4);
-  --margin-5l: calc(var(--default-margin) * 5);
-  --margin-6l: calc(var(--default-margin) * 6);
 }
 
 .g-header {
